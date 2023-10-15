@@ -180,7 +180,7 @@ exports.sendMailLocataire = async (req, res) => {
         var mailOption = {
             from: process.env.SMTP_NAME + "<" + process.env.SMTP_USERNAME + ">",
             to: result.email,
-            cc: process.env.SMTP_USERNAME,
+            cc: req.user.username,
             subject: "quittance de loyer pour " + moment(facture.month_rental).format("MMMM YYYY"),
             text: "Vous retouverai ci-joint le quittance de loyer pour le mois de Octobre",
             attachments: [{
