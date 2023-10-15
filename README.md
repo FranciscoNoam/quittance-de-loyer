@@ -1,46 +1,35 @@
 # Projet Ownily
 
-## Techonologie utilisée:
+## Technologies Utilisées
 
-- Backend: NodeJS
- 
-- Frontend: Framework ejs de nodejs (manque de temps utilisé d'autre techno pour le frontend)
- 
-### Structure du projet
+- **Backend**: Node.js
+- **Frontend**: EJS (Embedded JavaScript), un moteur de modèle pour Node.js
 
-  # Structure de base: MVC
+## Structure du Projet
 
-  - Model: raçine du project /src/models
-  - Vue: raçine du project /views
-  - Controller: raçine du project /src/controllers
+Le projet Ownily suit une structure MVC (Modèle-Vue-Contrôleur) classique pour l'organisation de son code source. Voici un aperçu de la structure du projet :
 
-  # Autre:
-  - Scripts (permettant la communication de front et api avec le back): raçine du projet /src/scripts
-  - Routes (gestion d' appel des apis): raçine du projet /src/routes
-  - Render (gestion de redirection du page web):   raçine du projet /src/render
-  - Public (gestion des media):   raçine du projet /public
-  - Asset (gestion des styles):   raçine du projet /assets
+### Structure de Base (MVC)
 
-### N.B: le fichier .env est essentielle pour le lancement de l'application 
+- **Modèle**: Situé à la racine du projet `/src/models`.
+- **Vue**: Située à la racine du projet `/views`.
+- **Contrôleur**: Situé à la racine du projet `/src/controllers`.
 
-Afin d'appliquer la version attendue pour faire tourner l'application
+### Autres Composants
 
-### Installation du back et du front
+- **Scripts** (pour la communication entre le frontend et l'API du backend) : Situé à la racine du projet `/src/scripts`.
+- **Routes** (pour la gestion des appels aux API) : Situé à la racine du projet `/src/routes`.
+- **Rendu** (pour la gestion des redirections de pages web) : Situé à la racine du projet `/src/render`.
+- **Public** (pour la gestion des médias) : Situé à la racine du projet `/public`.
+- **Assets** (pour la gestion des styles) : Situé à la racine du projet `/assets`.
 
-  -npm install (pour l'installation des dépendences)
+### Configuration Essentielle
 
- # N.B: j'ai pas utilisé docker pour ce test
+Le fichier `.env` est essentiel pour le lancement de l'application. Il contient les variables d'environnement nécessaires pour configurer l'application conformément à vos besoins.
 
-### Pour lancer la stack il est préférable d'utiliser ces commandes dans le racine du projet:
+### Installation
+
+Avant de lancer l'application, assurez-vous d'installer les dépendances nécessaires en exécutant la commande suivante dans le répertoire racine du projet :
 
 ```bash
-
-npm start 
-ou
-npm run start:dev
-
-## Contrainte lors du développement:
-
-# Manque de temps pour ajouter d'autre fonctionalité de base comme:
-  - gestion profile de l'utilisateur connecté
-  - gestion historique pour chaque appartement et locataire
+npm install
