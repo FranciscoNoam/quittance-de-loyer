@@ -15,7 +15,7 @@
   - Controller: raçine du project /src/controllers
 
   # Autre:
-  - Scripts (permettant la communication de front et api): raçine du projet /src/scripts
+  - Scripts (permettant la communication de front et api avec le back): raçine du projet /src/scripts
   - Routes (gestion d' appel des apis): raçine du projet /src/routes
   - Render (gestion de redirection du page web):   raçine du projet /src/render
   - Public (gestion des media):   raçine du projet /public
