@@ -1,0 +1,79 @@
+
+@import url("../../assets/css/variable.css");
+
+.bl-search a.search {
+    /*padding: 29px 20px 30px 10px;*/
+    padding: 10px 10px 15px 10px;
+    clear: both;
+}
+
+.bl-search a.search i {
+    margin: 0;
+    display: inline-block;
+    font-size: 18px;
+}
+
+.bl-search a.search input {
+    border: 1px solid #EEE;
+    padding: 7.5px 11px;
+    background: #FFF;
+    outline: none;
+    color: #777;
+
+    /* == */
+    width: auto;
+    float: left;
+    /* == */
+}
+
+.bl-search a.search button {
+    border: 1px solid #0366a2;
+    /*padding: 10px;*/
+    background-color: #0366a2;
+    outline: none;
+    color: #FFF;
+    margin-left: -4px;
+
+    /* == */
+    float: left;
+    padding: 10px 10px 11px 10px;
+    /* == */
+}
+
+.bl-search a.search input:focus {
+    border: 1px solid #0366a2;
+}
+
+
+.search-mobile {
+    display: none !important;
+    background: #0366a2;
+    border-left: 1px solid #0366a2;
+    border-radius: 0 3px 3px 0;
+}
+
+.search-mobile i {
+    color: #FFF;
+    margin: 0 !important;
+}
+
+.bl-search{
+    padding: 9px 0;
+    margin-left: 13px;
+}
+
+.act-right{
+    /*width: 152px;*/
+    display: flex;
+    justify-content: end;
+}
+
+.dropstart{
+    margin-left: 28px;
+    align-items: center!important;
+}
+
+#inbox-list-sms{
+    display: flex;
+    align-items: center;
+}

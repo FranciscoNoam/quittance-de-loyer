@@ -1,0 +1,335 @@
+.logo-twif {
+    display: none;
+}
+.vg-logo {
+    display: block;
+}
+
+.right-dash {
+    display: grid;
+    .ttl-wraper {
+        display: none;
+    }
+}
+.person {
+    padding-left: 0 !important;
+    color: #0f9359 !important;
+}
+
+td.action-table {
+    justify-content: end;
+}
+
+@media (max-width: 1124px) {
+    .head-list-sms {
+        display: block !important;
+    }
+}
+
+@media (max-width: 1020px) {
+    .logo-twif {
+        display: block;
+    }
+    .vg-logo {
+        display: none;
+    }
+    .rs-title {
+        font-size: 21px;
+    }
+    .vg-body {
+        .side-nav {
+            width: 53px !important;
+            .vg-menu {
+                padding: 0 0px;
+            }
+            ul {
+                li {
+                    padding: 11px 16px 6px 15px !important;
+                    border-radius: 0 !important;
+                    label {
+                        display: none;
+                    }
+                    .badge-notif {
+                        position: absolute;
+                        right: 0;
+                        top: -3px;
+                    }
+                }
+            }
+        }
+        .vg-wrapper {
+            width: 100%;
+        }
+    }
+
+    .vg-grid {
+        grid-template-rows: 161px !important;
+        .grid-col {
+            height: 162px !important;
+        }
+    }
+
+    .vg-guide {
+        display: flex;
+        justify-content: center;
+    }
+
+    .vg-version {
+        font-size: 9px;
+    }
+
+    #language-select {
+        font-size: 14px;
+        padding: 6px;
+    }
+
+    .select2-search {
+        display: none;
+    }
+
+    .show-search-icon .select2-search {
+        display: block;
+    }
+
+    .select2-container--open .select2-dropdown {
+        max-height: 200px;
+    }
+    /* .vg-grid{
+        display: inline-block;
+        .grid-col{
+            margin-top: 10px;
+        }
+    }*/
+}
+
+@media (max-width: 972px) {
+
+    .right-dash,
+    .left-dash {
+        width: 100%;
+        display: inline;
+    }
+    .left-dash {
+        .ttl-wraper {
+            display: none;
+        }
+    }
+    .right-dash {
+        padding-top: 0;
+        .ttl-wraper {
+            display: block;
+        }
+    }
+    .row-dash {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .demo-mobile-desktop-usage {
+        width: 100%;
+        display: flex;
+    }
+    .start-date-dash,
+    .end-date-dash {
+        width: 50%;
+    }
+
+    .end-date-dash {
+        margin-left: 20px;
+        border-left: 1px solid #eaeaea;
+        padding-left: 20px;
+        margin-right: 16px;
+    }
+
+    .btn-aff-dash {
+        width: 119px;
+        margin: 0 0 22px;
+        padding: 6px 0 3px;
+    }
+    .vg-body-content .vg-grid {
+        display: grid;
+        grid-template-columns: 30% 30% 30% !important;
+    }
+}
+
+@media (max-width: 928px) {
+    #table_call_history {
+        width: 876px;
+    }
+    .mob-tab-sms {
+        display: block;
+    }
+    .tab-sms {
+        display: none !important;
+    }
+}
+
+@media (max-width: 790px) {
+    .demo-mobile-desktop-usage {
+        width: 90%;
+        input {
+            font-size: 4vw !important;
+        }
+    }
+}
+
+@media (max-width: 745px) {
+    .start-date,
+    .end-date {
+        div {
+            width: 59px;
+        }
+    }
+}
+
+/*@media screen and (max-width: 580px) {*/
+   
+@media (max-width: 580px) {
+    .demo-mobile-desktop-usage {
+        width: 90%;
+        display: inline;
+    }
+.start-date-dash,
+    .end-date-dash {
+        width: 100%;
+    }
+
+    .end-date-dash {
+        border: none;
+        margin: 0 0 21px;
+        padding: 0;
+    }
+
+    .vg-grid {
+        // background-color:blue !important;
+        width: 100%;
+        padding: 20px;
+        display: inline-block !important;
+        
+        .grid-col {
+            margin-top: 10px;
+        }
+    }
+
+    .modal-call {
+        width: 26rem;
+        max-width: 26rem;
+        height: 27rem;
+        .img-user-call {
+            display: none;
+        }
+        .form-control {
+            padding: 0.275rem 0.45rem;
+        }
+        .modal-body .form-note .input-form {
+            display: flex;
+            align-items: end;
+            gap: 10px;
+            justify-content: center;
+            flex-direction: column;
+        }
+        .form-group {
+            width: 100%;
+        }
+    }
+
+    .modal-recording {
+        width: 25rem;
+        max-width: 25rem;
+        position: fixed;
+        height: 18rem;
+        bottom: 20%;
+        z-index: 99999999999;
+        border-radius: 3%;
+        top: 30px;
+        /* padding: 20px; */
+        -webkit-border-radius: 3%;
+        -moz-border-radius: 3%;
+        -ms-border-radius: 3%;
+        -o-border-radius: 3%;
+    }
+
+    .small-window-recording {
+        position: fixed;
+        top: 1em;
+        right: 0em;
+        width: 260px;
+        max-width: 260px;
+        height: auto;
+        padding: 13px;
+        z-index: 99999999999;
+        background-color: #080820;
+        border-radius: 23px;
+        display: none;
+    }
+
+    .g-button {
+        display: flex;
+        gap: 17px;
+        margin: -11px 0 23px;
+        justify-content: flex-start;
+        flex-direction: column;
+    }
+
+    .vg-section-title {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-right: 18px;
+        margin-bottom: 30px;
+        margin-top: 4px;
+        flex-direction: column;
+    }
+    .w-cust-7 {
+        width: 100% !important;
+    }
+    .q-active-faq {
+        width: 100%;
+    }
+
+    .interface_service_client {
+        width: 90%;
+
+        .list_service_chatbot{
+            width: 100%;
+        }
+        .q-active{
+            width: 100%;
+        }
+        .message_chatbot{
+            width: 100%;
+        }
+        .message_chatbot{
+            font-size: 12px;
+        }
+    }
+
+    #modal-02 {
+        position: fixed !important;
+        width: 100%;
+        height: 100%;
+        right: 0px !important;
+        left: inherit !important;
+        background-color: rgba(0, 0, 0, 0.2) !important;
+        overflow-y: auto;
+        z-index: 4;
+        opacity: 1;
+        animation-duration: 0.6s;
+        box-shadow: 0 0 44px -3px rgba(255, 255, 255, 0.44);
+        bottom: 0 !important;
+        top: auto !important;
+        border-radius: 0;
+        bottom: 0 !important;
+        top: auto !important;
+    }
+    
+     .vg-header {
+        z-index: 4 !important;
+    }
+    
+    .btn-aff-dash{
+        justify-content: center;
+    }
+
+
+
+}

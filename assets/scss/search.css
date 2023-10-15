@@ -1,0 +1,40 @@
+#searchWrap {
+  display: inline-block;
+  position: relative;
+  height: 35px;
+  float: right;
+  padding: 0;
+  position: r elative;
+}
+#searchWrap i {
+  position: absolute;
+  top: 11px;
+  right: 10px;
+  color: #8d8d8d;
+  z-index: -1;
+}
+#searchWrap input[type=text] {
+  height: 60px;
+  font-size: 55px;
+  display: inline-block;
+  font-weight: 100;
+  border: none;
+  outline: none;
+  color: #555;
+  padding: 13px 19px;
+  width: 0px;
+  background: none;
+  z-index: 3;
+  transition: width 0.4s cubic-bezier(0, 0.795, 0, 1);
+  cursor: pointer;
+  height: 35px;
+}
+#searchWrap input[type=text]:focus {
+  width: 250px;
+  z-index: 1;
+  cursor: text;
+  font-size: 16px;
+  font-weight: 300;
+  padding: 0 21px;
+  height: 35px;
+}/*# sourceMappingURL=search.css.map */

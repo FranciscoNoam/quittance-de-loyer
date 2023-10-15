@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/png" href="/img/favicon.ico" />
+        <title>Location</title>
+
+        <link rel="stylesheet" href="css/resizable-table-columns.min.css">
+
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/css/bootstrap.min.css">
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+        <link
+            href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css"
+            rel="stylesheet" />
+
+        <!-- Datatable -->
+        <link
+            href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css"
+            rel="stylesheet" />
+
+            <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/buttons/2.1.1/css/buttons.dataTables.min.css">
+
+        <link rel="stylesheet" href="scss/main.css">
+
+        <!-- Mobiscroll JS and CSS Includes -->
+        <link rel="stylesheet" href="jsmb/mobiscroll.javascript.min.css">
+        <script src="jsmb/mobiscroll.javascript.min.js"></script>
+
+        <!-- sStyle te range picker -->
+        <link rel="stylesheet" type="text/css"
+            href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+        <link rel="stylesheet"
+            href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+        <link
+            href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css"
+            rel="stylesheet" />
+       
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/driver.js/0.9.7/driver.min.css">
+        <style>
+        .iti-flag {
+            background-image: url("img/flags.png");
+        }
+        /*.logo{
+            width: 95%;
+        } */
+        .logo{
+            width: 25%;
+        }
+        .form_loading{
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            background-color: #00000066;
+            left: 0%;
+            top: 0%;
+            align-content: center !important;
+            justify-content: center !important;
+            align-items: center;
+        }
+        .div-loading{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+        }
+
+    </style>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/habibmhamadi/multi-select-tag/dist/css/multi-select-tag.css">
+
+    </head>
+
+    <body >
+    <!--<body ondrop="drop(event)" ondragover="allowDrop(event)">-->
+
+        
+        <div class="g-loading w-auto">
+
+
+            <div id="loading_page" class="modal fade show form_loading"
+                data-bs-backdrop="static" data-bs-keyboard="false"
+                tabindex="-1" aria-labelledby="staticBackdropLabel"
+                aria-hidden="true"
+                style="z-index:99999999999999999999;display: block; box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;">
+
+                <div class="div-loading">
+                    <div class="d-flex justify-content-center">
+                        <div class="spinner-border" role="status" style=" color: white; ">
+                            <span class="visually-hidden">Loading...</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="vg-body h-100" id="sidebarChange">
+            <div class="vg-container h-100">
+                <div class="side-nav">
+                    <a href="/">
+
+                        <img src="img/logo-maison-ownily.png" id="Layer_1" class="logo-twif" width="47">
+
+                        <!--<svg id="Layer_1" class="logo-twif" data-name="Layer 1"
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 221 186">
+                            <defs>
+                                <style>
+                                .cls-1 {
+                                  fill: #fff;
+                                }
+                              </style>
+                            </defs>
+                            <g>
+                                <path class="cls-1"
+                                    d="m152.76,53.46h0c-12.58-10.88-28.81-15.33-44.37-13.35-3.46.44-4.88,4.7-2.41,7.17l6.18,6.18c11.21,11.21,29.39,11.21,40.6,0Z" />
+                                <path class="cls-1"
+                                    d="m158.66,99.96l6.18,6.18c2.47,2.47,6.73,1.05,7.17-2.41,1.98-15.56-2.47-31.78-13.35-44.37h0c-11.21,11.21-11.21,29.39,0,40.6h0Z" />
+                                <path class="cls-1"
+                                    d="m165.1,118.2l-12.34-12.34c-11.21-11.21-29.39-11.21-40.6,0l-30.34,30.34c-1.82,1.82-1.62,4.87.47,6.38,22.23,16.12,53.5,14.16,73.53-5.87,4.1-4.1,7.45-8.68,10.03-13.55.87-1.64.56-3.65-.75-4.96Z" />
+                                <path class="cls-1"
+                                    d="m106.26,59.36l-12.34-12.34c-1.31-1.31-3.33-1.62-4.96-.75-4.87,2.59-9.45,5.93-13.55,10.03-20.04,20.04-21.99,51.3-5.87,73.53,1.51,2.09,4.56,2.3,6.38.47l30.34-30.34c11.21-11.21,11.21-29.39,0-40.6h0Z" />
+                            </g>
+                            <circle class="cls-1" cx="132.46" cy="80.73" r="7.4" />
+                        </svg>-->
+
+                        <div class="vg-logo">
+                            <!-- <img src="img/logo_twifone_blanc.svg" alt> -->
+                            <img src="img/logo.svg" id="Layer_2">
+
+                            <!--<svg id="Layer_2" data-name="Layer 1" width="100%"
+                                xmlns="http://www.w3.org/2000/svg"
+                                viewBox="250 0 880 375"> 
+                                <defs>
+                                    <style>
+                                        .cls-1 {
+                                            fill: #fff;
+                                        }
+                                    
+                                        .cls-2 {
+                                            fill: none;
+                                        }
+                                    </style>
+                                </defs>
+                                <g>
+                                    <path class="cls-1"
+                                        d="m543.45,222.48c2.95,2.33,4.04,4.2,4.04,6.53,0,4.51-5.13,6.84-15.39,6.84h-14.77c-10.26,0-15.39-2.33-15.39-6.84,0-2.33,1.09-4.2,4.04-6.53,2.49-1.87,2.95-3.58,2.95-8.86v-66.23c0-4.66-1.24-7.31-3.42-7.31h-.78c-6.22,0-9.95,3.27-13.84,11.66-3.89,8.71-8.08,12.75-12.28,11.82-3.42-.62-4.2-4.04-3.11-15.39,1.4-15.86,3.89-21.14,10.42-21.14h77.58c6.53,0,9.02,5.29,10.42,21.45.93,11.04.31,14.46-3.11,15.08-4.2.93-8.24-2.95-12.44-11.66-3.89-8.55-7.62-11.82-13.68-11.82h-.78c-2.18,0-3.42,2.64-3.42,7.31v66.23c0,5.44.47,7,2.95,8.86Z" />
+                                    <path class="cls-1"
+                                        d="m613.25,236.63c-9.02,0-15.39-5.75-18.19-16.48l-9.95-37.62c-1.71-6.06-3.89-10.42-6.53-12.75-5.13-4.98-2.64-11.82,11.82-11.82h12.13c9.64,0,13.37,3.27,12.59,11.04-.16.78-.16,1.71-.16,2.49,0,3.73.78,8.24,2.18,13.37l5.29,19.28c2.49,9.33,4.66,12.75,7.62,12.75,2.33,0,3.73-3.11,3.73-9.79.16-9.17-1.56-16.95-4.2-25.65-1.71-5.75-3.73-9.64-6.22-11.82-5.13-4.82-2.8-11.66,11.66-11.66h12.13c9.64,0,13.37,3.27,12.59,11.04-.16.78-.16,1.71-.16,2.49,0,3.73.78,8.24,2.18,13.37l5.29,19.28c2.49,9.33,4.66,12.75,7.62,12.75,2.49,0,3.89-3.58,3.89-11.04,0-17.1-6.84-27.67-6.84-36.07,0-7.77,5.91-12.59,15.24-12.59s12.75,4.82,12.75,17.88c0,30.47-21.14,61.57-41.82,61.57-7.93,0-12.44-5.13-16.64-13.53-.62-1.24-1.24-1.87-1.87-1.87s-1.4.47-2.18,1.4c-7.15,8.71-15.55,13.99-23.94,13.99Z" />
+                                    <path class="cls-1"
+                                        d="m748.2,224.04c3.11,2.49,4.04,3.73,4.04,5.75,0,4.04-4.98,6.06-15.39,6.06h-13.99c-10.42,0-15.55-2.02-15.55-6.06,0-2.02.93-3.26,4.04-5.75,2.33-1.87,3.11-3.89,3.11-9.48v-32.8c0-5.75-1.09-7.62-5.13-10.88-2.49-1.87-3.58-2.95-3.58-4.98,0-8.24,23.01-9.33,28.3-9.33,9.02,0,11.82,2.33,11.82,9.64,0,4.04-.78,9.33-.78,14.77v33.58c0,5.6.62,7.62,3.11,9.48Zm-19.9-105.56c10.11,0,17.1,5.75,17.1,14.3s-6.84,14.3-17.1,14.3-17.26-5.6-17.26-14.3,6.84-14.3,17.26-14.3Z" />
+                                    <path class="cls-1"
+                                        d="m763.9,149.88c0-19.59,11.04-32.34,28.14-32.34,13.21,0,24.72,7.46,24.72,18.35,0,7.93-6.06,13.06-15.24,13.06s-14.77-4.66-14.77-12.13c0-5.13,2.64-10.57-.16-10.57-2.64,0-4.66,5.6-4.66,11.97,0,10.88,5.75,19.9,13.21,19.9h3.42c7.15,0,8.86,1.55,8.86,6.37s-2.02,7-8.86,7c-2.64,0-3.89,1.4-3.89,3.89v38.4c0,5.6.78,7.77,3.58,9.64,3.89,2.64,4.98,3.89,4.98,6.06,0,4.2-5.13,6.37-15.7,6.37h-14.77c-10.57,0-15.86-2.02-15.86-6.06,0-2.02.93-3.26,4.04-5.75,2.33-1.87,2.95-3.89,2.95-9.48v-39.18c0-2.49-1.24-3.73-3.89-4.2-3.42-.62-4.66-2.18-4.66-6.06s1.4-5.91,4.66-6.69c2.8-.47,3.89-1.87,3.89-4.2v-4.35Z" />
+                                    <path class="cls-1"
+                                        d="m851.74,156.41c26.12,0,42.44,15.08,42.44,40.42s-16.32,40.58-42.44,40.58-42.6-15.24-42.6-40.58,16.17-40.42,42.6-40.42Zm5.13,71.67c6.22,0,8.24-6.53,8.24-14.61,0-13.22-7.15-47.73-18.81-47.73-6.22,0-8.24,6.53-8.24,14.61,0,13.22,7.15,47.73,18.81,47.73Z" />
+                                    <path class="cls-1"
+                                        d="m936.63,214.55c0,5.6.62,7.62,2.95,9.48,3.11,2.49,4.04,3.73,4.04,5.75,0,4.04-4.98,6.06-15.24,6.06h-14.15c-10.26,0-15.39-2.02-15.39-6.06,0-2.02.93-3.26,4.04-5.75,2.33-1.87,2.95-3.89,2.95-9.48v-32.8c0-5.75-1.09-7.62-4.98-10.88-2.49-1.87-3.58-3.11-3.58-4.98,0-8.24,23.01-9.33,28.3-9.33,7.31,0,10.42,1.4,11.51,5.75.31,1.56.78,2.33,1.55,2.33.31,0,.93-.31,1.71-.78,6.37-4.82,13.37-7.31,20.83-7.31,15.86,0,25.5,10.57,25.5,27.83v30.16c0,5.6.62,7.62,2.95,9.48,3.11,2.49,4.04,3.73,4.04,5.75,0,4.04-4.98,6.06-15.24,6.06h-14.15c-10.26,0-15.39-2.02-15.39-6.06,0-2.02.93-3.26,4.04-5.75,2.33-1.87,2.95-3.89,2.95-9.48v-28.76c0-7.93-3.89-12.9-9.95-12.9-5.6,0-9.33,4.2-9.33,10.42v31.25Z" />
+                                    <path class="cls-1"
+                                        d="m1049.81,194.34c-6.84,1.71-13.99,2.8-23.01,3.27,3.11,11.97,10.73,19.12,21.46,19.12,4.66,0,10.42-1.4,14.15-6.22,1.4-2.02,2.95-2.95,4.51-2.95,2.49,0,3.27,2.18,2.49,6.69-2.49,13.84-15.86,23.16-33.58,23.16-23.32,0-39.02-16.32-39.02-40.42s16.01-40.73,40.11-40.73c17.88,0,29.69,8.86,29.69,22.39,0,8.08-4.35,12.28-16.79,15.7Zm-22.85-4.98c8.55-.47,13.68-5.44,13.68-13.53,0-6.22-2.95-10.57-7.15-10.57-5.29,0-8.4,6.84-8.4,18.5,0,2.02.16,3.89.31,5.75l1.55-.16Z" />
+                                </g>
+                                <g>
+                                    <g>
+                                        <path class="cls-1"
+                                            d="m355.21,133.02h0,0c-12.99-11.23-29.73-15.82-45.79-13.78-3.58.46-5.04,4.86-2.49,7.4l6.38,6.38c11.57,11.57,30.33,11.57,41.9,0Z" />
+                                        <path class="cls-1"
+                                            d="m361.3,181.02l6.38,6.38c2.55,2.55,6.95,1.08,7.4-2.49,2.04-16.06-2.55-32.8-13.78-45.79h0s0,0,0,0c-11.57,11.57-11.57,30.33,0,41.9Z" />
+                                        <path class="cls-1"
+                                            d="m367.95,199.84l-12.74-12.74c-11.57-11.57-30.33-11.57-41.9,0l-31.32,31.32c-1.88,1.88-1.67,5.02.49,6.59,22.94,16.64,55.21,14.62,75.89-6.06,4.23-4.23,7.69-8.96,10.35-13.98.9-1.69.58-3.77-.77-5.12Z" />
+                                        <path class="cls-1"
+                                            d="m307.22,139.11l-12.74-12.74c-1.35-1.35-3.43-1.67-5.12-.77-5.03,2.67-9.75,6.12-13.98,10.35-20.68,20.68-22.7,52.95-6.06,75.89,1.56,2.16,4.7,2.37,6.59.49l31.32-31.32c11.57-11.57,11.57-30.33,0-41.9Z" />
+                                    </g>
+                                    <circle class="cls-1" cx="334.26" cy="161.17"
+                                        r="7.64" />
+                                </g>
+                                <rect class="cls-2" x="160.25" y="19.06" width="1009"
+                                    height="317" />
+                            </svg>-->
+                            
+                        </div>
+                    </a>
+                    <div class="vg-menu">
+
+                        <%- include('pages/sections/navbar') %>
+                    </div>
+                </div>
+                <div class="vg-wrapper">
+                    <div class="vg-header">
+                        <%- include('pages/sections/header') %>
+                    </div>
+
+                    <div class="vg-content-wrapper">
+
+                        <div id="contentWrapper">
+
+                        </div>
+
+                    </div>
+                </div>
+                <%- include('pages/sections/modals') %>
+
+            </div>
+              
+
+            </div>
+        </div>
+
+        <script
+            src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.0/dist/js.cookie.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/ejs@3.1.9/ejs.min.js"></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+            crossorigin="anonymous"></script>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+        <!-- Script Date range picker -->
+        <script type="text/javascript"
+            src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+        <script type="text/javascript"
+            src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+        <script type="text/javascript"
+            src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+
+        <!-- Datatable -->
+        <script
+            src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
+        <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/buttons/2.1.1/js/dataTables.buttons.min.js"></script>
+        <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/buttons/2.1.1/js/buttons.colVis.min.js"></script>
+
+        <script src="https://cdn.jsdelivr.net/gh/jeffreydwalter/ColReorderWithResize@9ce30c640e394282c9e0df5787d54e5887bc8ecc/ColReorderWithResize.js"></script>
+
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.26.0/moment.min.js"
+            integrity="sha256-5oApc/wMda1ntIEK4qoWJ4YItnV4fBHMwywunj8gPqc="
+            crossorigin="anonymous"></script>
+            <!-- pako js -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/pako/2.0.4/pako.min.js"></script>
+
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/driver.js/0.9.7/driver.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/habibmhamadi/multi-select-tag/dist/js/multi-select-tag.js"></script>
+        
+        
+        <script src="/js/js.js"></script>
+
+        <!--<script src="/js/popup.script.js"></script>
+        <script src="/js/user.script.js"></script>
+        <script src="/js/bien.script.js"></script>
+        <script src="/js/locataire.script.js"></script>
+        <script src="/js/quittance.script.js"></script>
+        <script src="/js/menu.script.js"></script>--> 
+      
+        <script src="/js/resizable-table-columns.min.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/select2-flag-icons@1.1.0/dist/select2-flag-icons.min.js"></script>
+
+
+
+    </body>
+</html>

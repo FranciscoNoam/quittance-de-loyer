@@ -1,0 +1,183 @@
+<div class="vg-body-content">
+    <div class="row">
+        <div class="col-12">
+            <div class="vg-section-title">
+                <h2 class="vg-title rs-title" id="title-list-contact">Nouveau
+                    quittance </h2>
+
+            </div>
+
+            <div class="vg-table-content" id="list-quittance">
+
+                <div class="mt-5">
+                    <div class="row p-3">
+                        <div class="col-12">
+
+                            <input type="text" hidden id="client_id">
+                            <div class="row px-5">
+                                <div class="col-md-6 ">
+                                    <!-- -->
+
+                                    <div class="form-input d-flex">
+                                        <label>Réf:</label>
+                                        <input type="text" id="ref"
+                                            class="form-control form-sm-control"
+                                            placeholder="réf">
+                                    </div>
+                                    <div class="form-input d-flex">
+                                        <label>Date de paiement:</label>
+                                        <input type="date" id="invoice_date"
+                                            class="form-control form-sm-control">
+                                    </div>
+                                    <div class="form-input d-flex">
+                                        <label>Date de quittance</label>
+                                        <input type="date" id="due_date"
+                                            class="form-control form-sm-control">
+                                    </div>
+
+                                    <div class="form-input d-flex">
+                                        <label>Mois de location</label>
+                                        <input type="month" id="month_rental"
+                                            class="form-control form-sm-control">
+                                    </div>
+                                    
+
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <div class="form-input d-flex">
+                                            <button
+                                                class="btn tab-setting-active"
+                                                onclick="save_quittance()">
+                                                Enregistrer</button>
+                                                
+                                        </div>
+
+                                        <div class="form-input d-flex mt-3">
+                                            <label for>Locataires</label>
+                                            <select class="form-select"
+                                                id="locataire_id_list"
+                                                onchange="get_appartement()"
+                                                aria-label="Default select example">
+                                                <option selected hidden>Choisir</option>
+                                                <%for(var id=0;id<locataires.length;id++){%>
+                                                    <option
+                                                        value="<%=locataires[id]._id%>"><%=locataires[id].first_name+" "+locataires[id].last_name%></option>
+                                                    <%}%>
+                                                </select>
+                                            </div>
+
+                                            <div class="form-input d-flex">
+                                                <label for>Appartement</label>
+                                                <select class="form-select"
+                                                    id="list_bien">
+
+                                                </select>
+                                            </div>
+
+                                            <div class="form-input d-flex mt-3">
+                                                <label for>Paiment</label>
+                                                <select class="form-select"
+                                                    id="type_paiements"
+                                                    aria-label="Default select example">
+                                                    <%for(var id=0;id<paiements.length;id++){%>
+                                                        <option
+                                                            value="<%=paiements[id]._id%>"><%=paiements[id].description%></option>
+                                                        <%}%>
+                                                </select>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="mt-4 overflow-auto">
+                                    <table class="table" id="form-bon-commande">
+                                        <thead>
+                                            <tr>
+                                                <th>Designation</th>
+                                                <th>Prevision de charge</th>
+                                                <th>Montant(AR)</th>
+                                                <th>TVA (%)</th>
+                                                <th>Montant HT</th>
+                                                <th>Montant TTC </th>
+                                                <th></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td> <span id="name_appartement">
+                                                    </span>
+                                                </td>
+
+                                                <td><input type="number"
+                                                        id="charge"
+                                                        name="charge[]"
+                                                        onclick="calcule_tarif()"
+                                                        onkeyup="calcule_tarif()"
+                                                        value="0"
+                                                        class="form-control form-sm-control">
+                                                    </td>
+
+                                                <td><input type="number"
+                                                        id="pu"
+                                                        name="pu[]"
+                                                        disabled
+                                                        value="0"
+                                                        class="form-control form-sm-control">
+                                                    </td>
+
+                                                <td><input type="number"
+                                                        id="tva"
+                                                        name="tva[]"
+                                                        onclick="calcule_tarif()"
+                                                        onkeyup="calcule_tarif()"
+                                                        value="0"
+                                                        class="form-control form-sm-control">
+                                                    </td>
+                                                <td class="result_montant">0 AR</td>
+                                                <td class="result_montant_ttc">0
+                                                    AR</td>
+                                                <td></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+
+                                <div class="row d-flex justify-content-end">
+                                    <div class="col-md-4">
+                                        <table class="table">
+                                            <tbody>
+                                                <tr>
+                                                    <td>Total HT </td>
+                                                    <td id="total_ht">0 AR </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Total prevision de charge </td>
+                                                    <td id="total_charge">0 AR
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Total TVA </td>
+                                                    <td id="total_tva">0 AR
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Total TTC </td>
+                                                    <td id="total_ttc">0 AR
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>

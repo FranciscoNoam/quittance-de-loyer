@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="27.461" height="22.368" viewBox="0 0 27.461 22.368">
+  <g id="Icon" transform="translate(1 1)">
+    <ellipse id="Oval" cx="2.938" cy="2.778" rx="2.938" ry="2.778" transform="translate(0 0)" fill="none" stroke="#2f2fc9" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
+    <path id="Path" d="M.385,0V14.813" transform="translate(2.553 5.555)" fill="none" stroke="#2f2fc9" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
+    <ellipse id="Oval-2" data-name="Oval" cx="2.938" cy="2.778" rx="2.938" ry="2.778" transform="translate(9.793 11.11)" fill="none" stroke="#2f2fc9" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
+    <path id="Path-2" data-name="Path" d="M.385,0V11.11" transform="translate(12.346 0)" fill="none" stroke="#2f2fc9" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
+    <path id="Path-3" data-name="Path" d="M.385,0V3.7" transform="translate(12.346 16.665)" fill="none" stroke="#2f2fc9" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
+    <ellipse id="Oval-3" data-name="Oval" cx="2.938" cy="2.778" rx="2.938" ry="2.778" transform="translate(19.585 5.555)" fill="none" stroke="#2f2fc9" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
+    <path id="Path-4" data-name="Path" d="M.385,0V9.258" transform="translate(22.138 11.11)" fill="none" stroke="#2f2fc9" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
+    <path id="Path-5" data-name="Path" d="M.385,0V5.555" transform="translate(22.138 0)" fill="none" stroke="#2f2fc9" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
+  </g>
+</svg>

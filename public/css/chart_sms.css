@@ -1,0 +1,53 @@
+
+canvas#myChart{
+    height: 120px!important;
+    width: 120px!important;
+    margin: auto;
+}
+.info-sms h4{
+    font-size: 16px;
+    font-weight: 500;
+    color: #1f353f;
+}
+.stat1-sms{
+    display: flex;
+    justify-content: space-between;
+}
+.st-content{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.st-content p{
+    margin: 0;
+    font-size: 40px;
+    color: #ff638499;
+}
+.st-content span{
+    font-size: 12px;
+    color: #615c5c;
+}
+.st-content .entrant{
+    color: #37a2eba6!important;
+}
+.sortant-in-p, .entrant-in-p{
+    color: #43424299!important;
+}
+.legend-sms{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.legend-sms span{
+   font-size: 12px;
+}
+.c-sortant{
+    width: 15px;
+    height: 10px;
+    background: #ff6384;
+}
+.c-entrant{
+    width: 15px;
+    height: 10px;
+    background: #37a2eb;
+}

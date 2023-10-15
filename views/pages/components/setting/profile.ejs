@@ -1,0 +1,23 @@
+<div class="vg-section-pass">
+    <div class="form-change-pass change-pass">
+        <div class="form-input">
+            <label for="">Nom complet<span class="text-danger">*</span></label> 
+            <input type="text" id="nameusr" value="<%=profile.name%>" class="form-control form-sm-control" placeholder="Nom complet">
+        </div>
+        <div class="form-input">
+            <label for="">Addresse<span class="text-danger">*</span></label> 
+            <input type="text" id="lastnameusr"  value="<%=profile.lastname%>" class="form-control form-sm-control" placeholder="Addresse">
+        </div>
+        <div class="form-input">
+            <label for="">E-mail<span class="text-danger">*</span></label> 
+            <input type="text" id="emailusr"  value="<%=profile.username%>" class="form-control form-sm-control" placeholder="E-mail">
+        </div>
+        <div class="form-input">
+            <label for="">Numéro du télephone<span class="text-danger">*</span></label> 
+                <input type="text" id="phoneusr"  value="<%=profile.national_number%>" class="form-control form-sm-control" placeholder="Numéro du télephone">
+        </div>
+        <div class="action-setting">
+            <button class="action-profile" onclick="updateProfile()">CONFIGUREZ</button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,465 @@
+<div
+    class="modal fade vg-modal"
+    id="modalAddNewBien"
+    data-bs-backdrop="static"
+    data-bs-keyboard="false"
+    tabindex="-1"
+    aria-labelledby="staticBackdropLabel"
+    aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span>Nouveau appartement</span>
+                <button
+                    type="button"
+                    class="btn-close"
+                    id="close-modal-new-bien"
+                    data-bs-dismiss="modal"
+                    aria-label="Close">
+                    <i class="fa fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="form-modal">
+                    <label for>Description<span class="text-danger">*</span>
+                    </label>
+                    <input
+                        type="text"
+                        id="descriptionbien"
+                        class="form-control form-sm-control"
+                        placeholder="Description" />
+                </div>
+                <div class="form-modal">
+                    <label for>Surface <span class="text-danger">*</span>
+                    </label>
+                    <input
+                        type="text"
+                        id="surfacebien"
+                        class="form-control form-sm-control"
+                        placeholder="Surface" />
+                </div>
+                <div class="form-modal">
+                    <label for>Le coup du loyer <span class="text-danger">*</span>
+                    </label>
+
+                    <div
+                        class="d-flex justify-content-between align-items-center">
+
+                        <input
+                            type="number"
+                            min="0"
+                            id="loyerbien"
+                            autocomplete="off"
+                            class="form-control form-sm-control"
+                            placeholder="Loyer" />
+                        <label> &nbsp; AR</label>
+                    </div>
+                </div>
+
+                <div class="form-modal">
+                    <label for>Addresse postale <span class="text-danger">*</span>
+                    </label>
+                    <input
+                        type="text"
+                        id="addressebien"
+                        autocomplete="off"
+                        class="form-control form-sm-control"
+                        placeholder="Addresse postale" />
+                </div>
+                <div class="modal-footer">
+                    <button type="button" id="addnewbien">
+                        Ajouter
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div
+    class="modal fade vg-modal"
+    id="modalUpdateBien"
+    data-bs-backdrop="static"
+    data-bs-keyboard="false"
+    tabindex="-1"
+    aria-labelledby="staticBackdropLabel"
+    aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span>Modification d'un appartement</span>
+                <button
+                    type="button"
+                    class="btn-close"
+                    id="close-modal-update-bien"
+                    data-bs-dismiss="modal"
+                    aria-label="Close">
+                    <i class="fa fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="form-modal">
+                    <label for>Description<span class="text-danger">*</span>
+                    </label>
+                    <input
+                        type="text"
+                        id="descriptionbienupdt"
+                        class="form-control form-sm-control"
+                        placeholder="Description" />
+                </div>
+                <div class="form-modal">
+                    <label for>Surface <span class="text-danger">*</span>
+                    </label>
+                    <input
+                        type="text"
+                        id="surfacebienupdt"
+                        class="form-control form-sm-control"
+                        placeholder="Surface" />
+                </div>
+                <div class="form-modal">
+                    <label for>Le coup du loyer <span class="text-danger">*</span>
+                    </label>
+
+                    <div
+                        class="d-flex justify-content-between align-items-center">
+
+                        <input
+                            type="number"
+                            id="loyerbienupdt"
+                            autocomplete="off"
+                            class="form-control form-sm-control"
+                            placeholder="Loyer" /> <label>&nbsp; AR</label>
+                    </div>
+                </div>
+
+                <div class="form-modal">
+                    <label for>Addresse postale <span class="text-danger">*</span>
+                    </label>
+                    <input
+                        type="text"
+                        id="addressebienupdt"
+                        autocomplete="off"
+                        class="form-control form-sm-control"
+                        placeholder="Addresse postale" />
+                </div>
+                <input type="text" id="bienidupdate" hidden>
+                <div class="modal-footer">
+                    <button type="button" id="updatebien">
+                        Modifier
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div
+    class="modal fade vg-modal"
+    id="modalDeleteBien"
+    data-bs-backdrop="static"
+    data-bs-keyboard="false"
+    tabindex="-1"
+    aria-labelledby="staticBackdropLabel"
+    aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span>Suppression d' appartement</span>
+                <button
+                    type="button"
+                    class="btn-close"
+                    id="close-modal-delete-bien"
+                    data-bs-dismiss="modal"
+                    aria-label="Close">
+                    <i class="fa fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="form-modal">
+                    <label for id="namecontactdlt"></label>
+                    <label for>Si vous souhaitez vraiment supprimer ces
+                        informations, cela est irréversible. <br />
+                        Toutes les données dépendantes de ces informations
+                        seront supprimées.</label>
+                </div>
+
+                <input type="text" hidden id="bieniddelete" />
+                <div class="modal-footer">
+                    <button role="button" id="deletebien">
+                        SUPPRIMER
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- **************************************** Locataire ******************************** -->
+
+<div
+    class="modal fade vg-modal"
+    id="modalAddNewLocataire"
+    data-bs-backdrop="static"
+    data-bs-keyboard="false"
+    tabindex="-1"
+    aria-labelledby="staticBackdropLabel"
+    aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span>Nouveau locataire</span>
+                <button
+                    type="button"
+                    class="btn-close"
+                    id="close-modal-new-locataire"
+                    data-bs-dismiss="modal"
+                    aria-label="Close">
+                    <i class="fa fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="form-modal">
+                    <label for>Nom<span class="text-danger">*</span>
+                    </label>
+                    <input
+                        type="text"
+                        id="lastnamelocataire"
+                        class="form-control form-sm-control"
+                        placeholder="Nom" />
+                </div>
+                <div class="form-modal">
+                    <label for>Prénom<span class="text-danger">*</span>
+                    </label>
+                    <input
+                        type="text"
+                        id="firstnamelocataire"
+                        class="form-control form-sm-control"
+                        placeholder="Prénom" />
+                </div>
+                <div class="form-modal">
+                    <label for>E-mail <span class="text-danger">*</span>
+                    </label>
+                    <input
+                        type="text"
+                        id="emaillocataire"
+                        class="form-control form-sm-control"
+                        placeholder="E-mail" />
+                </div>
+
+                <div class="form-modal">
+                    <label for>Numéro du télephone <span class="text-danger">*</span>
+                    </label>
+                    <input
+                        type="text"
+                        id="phonelocataire"
+                        class="form-control form-sm-control"
+                        placeholder="Numéro du télephone" />
+                </div>
+                <div class="form-modal">
+                    <label for>Addresse postale <span class="text-danger">*</span>
+                    </label>
+                    <input
+                        type="text"
+                        id="addresslocataire"
+                        autocomplete="off"
+                        class="form-control form-sm-control"
+                        placeholder="Addresse postale" />
+                </div>
+
+                <div class="form-modal">
+                    <label for>Appartement<span class="text-danger">*</span>
+                    </label>
+                    <select class="form-select"
+                        id="appartement_list_locataire"
+                        aria-label="Default select example">
+
+                    </select>
+                    <span class="text-danger" id="message_list_appartement">aucun
+                        appartement trouvé</span>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" id="addnewlocataire">
+                        Ajouter
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div
+    class="modal fade vg-modal"
+    id="modalUpdateLocataire"
+    data-bs-backdrop="static"
+    data-bs-keyboard="false"
+    tabindex="-1"
+    aria-labelledby="staticBackdropLabel"
+    aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span>Modification d'un locataire</span>
+                <button
+                    type="button"
+                    class="btn-close"
+                    id="close-modal-update-locataire"
+                    data-bs-dismiss="modal"
+                    aria-label="Close">
+                    <i class="fa fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="form-modal">
+                    <label for>Nom<span class="text-danger">*</span>
+                    </label>
+                    <input
+                        type="text"
+                        id="lastnamelocataireupdt"
+                        class="form-control form-sm-control"
+                        placeholder="Nom" />
+                </div>
+                <div class="form-modal">
+                    <label for>Prénom<span class="text-danger">*</span>
+                    </label>
+                    <input
+                        type="text"
+                        id="firstnamelocataireupdt"
+                        class="form-control form-sm-control"
+                        placeholder="Prénom" />
+                </div>
+                <div class="form-modal">
+                    <label for>E-mail <span class="text-danger">*</span>
+                    </label>
+                    <input
+                        type="text"
+                        id="emaillocataireupdt"
+                        class="form-control form-sm-control"
+                        placeholder="E-mail" />
+                </div>
+
+                <div class="form-modal">
+                    <label for>Numéro du télephone <span class="text-danger">*</span>
+                    </label>
+                    <input
+                        type="text"
+                        id="phonelocataireupdt"
+                        class="form-control form-sm-control"
+                        placeholder="Numéro du télephone" />
+                </div>
+                <div class="form-modal">
+                    <label for>Addresse postale <span class="text-danger">*</span>
+                    </label>
+                    <input
+                        type="text"
+                        id="addresslocataireupt"
+                        autocomplete="off"
+                        class="form-control form-sm-control"
+                        placeholder="Addresse postale" />
+                </div>
+
+                <div class="form-modal">
+                    <label for>Appartement<span class="text-danger">*</span>
+                    </label>
+                    <select class="form-select"
+                        id="appartement_list_locataireupdt"
+                        aria-label="Default select example">
+
+                    </select>
+
+                </div>
+
+                <input type="text" id="locataireidupdate" hidden>
+                <div class="modal-footer">
+                    <button type="button" id="updatelocataire">
+                        Modifier
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div
+    class="modal fade vg-modal"
+    id="modalDeleteLocataire"
+    data-bs-backdrop="static"
+    data-bs-keyboard="false"
+    tabindex="-1"
+    aria-labelledby="staticBackdropLabel"
+    aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span>Delete Appartement</span>
+                <button
+                    type="button"
+                    class="btn-close"
+                    id="close-modal-delete-locataire"
+                    data-bs-dismiss="modal"
+                    aria-label="Close">
+                    <i class="fa fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="form-modal">
+                    <label for id="namelocatairedlt"></label>
+                    <label for>Si vous souhaitez vraiment supprimer ces
+                        informations, cela est irréversible. <br />
+                        Toutes les données dépendantes de ces informations
+                        seront supprimées.</label>
+                </div>
+
+                <input type="text" hidden id="locataireiddelete" />
+                <div class="modal-footer">
+                    <button role="button" id="deletelocataire">
+                        SUPPRIMER
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- **************************************** quittance ******************************** -->
+
+<div
+    class="modal fade vg-modal"
+    id="modalDeletequittance"
+    data-bs-backdrop="static"
+    data-bs-keyboard="false"
+    tabindex="-1"
+    aria-labelledby="staticBackdropLabel"
+    aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span>Delete quittance de loyer</span>
+                <button
+                    type="button"
+                    class="btn-close"
+                    id="close-modal-delete-quittance"
+                    data-bs-dismiss="modal"
+                    aria-label="Close">
+                    <i class="fa fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="form-modal">
+                    <label for id="namelocatairedlt"></label>
+                    <label for>Si vous souhaitez vraiment supprimer ces
+                        informations, cela est irréversible. <br />
+                        Toutes les données dépendantes de ces informations
+                        seront supprimées.</label>
+                </div>
+
+                <input type="text" hidden id="quittanceiddelete" />
+                <div class="modal-footer">
+                    <button role="button" id="deletequittance">
+                        SUPPRIMER
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

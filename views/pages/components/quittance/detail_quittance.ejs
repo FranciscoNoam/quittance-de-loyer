@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/png" href="/img/favicon.ico" />
+        <title>Location</title>
+
+        <link rel="stylesheet" href="css/resizable-table-columns.min.css">
+
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/css/bootstrap.min.css">
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+        <link
+            href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css"
+            rel="stylesheet" />
+
+        <!-- Datatable -->
+        <link
+            href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css"
+            rel="stylesheet" />
+
+        <link rel="stylesheet" type="text/css"
+            href="https://cdn.datatables.net/buttons/2.1.1/css/buttons.dataTables.min.css">
+
+        <!-- Mobiscroll JS and CSS Includes -->
+        <link rel="stylesheet" href="jsmb/mobiscroll.javascript.min.css">
+        <script src="jsmb/mobiscroll.javascript.min.js"></script>
+
+        <!-- sStyle te range picker -->
+        <link rel="stylesheet" type="text/css"
+            href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+        <link rel="stylesheet"
+            href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+        <link
+            href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css"
+            rel="stylesheet" />
+
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/driver.js/0.9.7/driver.min.css">
+
+        <link rel="stylesheet"
+            href="https://cdn.jsdelivr.net/gh/habibmhamadi/multi-select-tag/dist/css/multi-select-tag.css">
+
+    </head>
+
+    <body>
+
+        <style>
+            .logo{
+                width: 40%;
+            }
+
+            .title{
+                background-color: gray;
+                color: white;
+                text-align: center;
+            }
+        </style>
+        <div class="container">
+
+            <div style="display: flex; justify-content:center;"
+                class="row d-flex justify-content-center">
+
+                <div class="col-md-10">
+
+                    <div
+                        style=" background-color: gray; color: white;text-align: center;">
+                        <h5>QUINTANCEE DE LOYER DU MOIS DE <%=facture.month_rental%>
+                        </h5>
+                    </div>
+
+                    <div style="text-align: center;">
+                        <p><%=facture.bien.address%></p>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h5>Bailleur:</h5>
+
+                            <h6><%=facture.user.first_name+" "+facture.user.last_name%></h6>
+                            <h6><%=facture.user.address%></h6>
+
+                            <p>Tél: <%=facture.user.phone%></p>
+                            <p>E-mail: <%=facture.user.username%></p>
+                        </div>
+
+                        <div class="col-md-6">
+                            <h5>Locataire:</h5>
+
+                            <h6><%=facture.locataire.first_name+" "+facture.locataire.last_name%></h6>
+                            <h6><%=facture.locataire.address%></h6>
+
+                        </div>
+                    </div>
+
+                    <div class="vg-table-content d-flex justify-content-end"
+                        style="box-shadow: none;">
+                        <table class="display table" border="1">
+
+                            <tbody>
+                                <tr>
+                                    <td class="call-profile-list">
+                                        Date de paiement
+
+                                    </td>
+                                    <td><%=facture.invoice_date%></td>
+                                </tr>
+                                <tr>
+                                    <td class="call-profile-list">
+                                        Date de la quittance
+                                    </td>
+                                    <td><%=facture.due_date%></td>
+                                </tr>
+                                <tr>
+                                    <td class="call-profile-list">
+                                        Mois de location
+                                    </td>
+                                    <td><%=facture.month_rental%></td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="mt-2 vg-table-content"
+                        style="box-shadow: none;">
+                        <table class="table" border="1">
+                            <thead class="bg-secondary">
+                                <tr>
+                                    <th>Object de paiement</th>
+                                    <th>Paiement</th>
+                                    <th>Prevision de charge</th>
+                                    <th>Loyer hors charge</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Loyer </td>
+
+                                    <td><%=facture.type_paiement.description%></td>
+                                    <td><%=facture.charge%> AR</td>
+                                    <td><%=facture.montant%> AR</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="mt-4 d-flex justify-content-between">
+
+                        <div
+                            class=" vg-table-content d-flex justify-content-start"
+                            style="box-shadow: none;">
+                            <span class="border border-secondary"
+                                style="width: 60%; padding:20px;">
+
+                                <%=facture.bien.name%>
+                            </span>
+                        </div>
+
+                        <div
+                            class=" vg-table-content d-flex justify-content-end"
+                            style="box-shadow: none;">
+                            <table class="display table" border="1">
+
+                                <tbody>
+                                    <tr>
+                                        <td class="call-profile-list">
+                                            Hors charge à payer
+                                        </td>
+                                        <td><%=facture.montant%> AR</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="call-profile-list">
+                                            Prevision de charge
+                                        </td>
+                                        <td><%=facture.charge%> AR</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="call-profile-list">
+                                            Montant payé
+                                        </td>
+                                        <td><%=facture.totale_montant%> AR</td>
+                                    </tr>
+
+                                </tbody>
+                            </table>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <script
+            src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.0/dist/js.cookie.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/ejs@3.1.9/ejs.min.js"></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+            crossorigin="anonymous"></script>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+        <!-- Script Date range picker -->
+        <script type="text/javascript"
+            src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+        <script type="text/javascript"
+            src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+        <script type="text/javascript"
+            src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+
+        <!-- Datatable -->
+        <script
+            src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
+        <script type="text/javascript" charset="utf8"
+            src="https://cdn.datatables.net/buttons/2.1.1/js/dataTables.buttons.min.js"></script>
+        <script type="text/javascript" charset="utf8"
+            src="https://cdn.datatables.net/buttons/2.1.1/js/buttons.colVis.min.js"></script>
+
+        <script
+            src="https://cdn.jsdelivr.net/gh/jeffreydwalter/ColReorderWithResize@9ce30c640e394282c9e0df5787d54e5887bc8ecc/ColReorderWithResize.js"></script>
+
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.26.0/moment.min.js"
+            integrity="sha256-5oApc/wMda1ntIEK4qoWJ4YItnV4fBHMwywunj8gPqc="
+            crossorigin="anonymous"></script>
+        <!-- pako js -->
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/pako/2.0.4/pako.min.js"></script>
+
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/driver.js/0.9.7/driver.min.js"></script>
+        <script
+            src="https://cdn.jsdelivr.net/gh/habibmhamadi/multi-select-tag/dist/js/multi-select-tag.js"></script>
+
+        <script src="/js/resizable-table-columns.min.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/select2-flag-icons@1.1.0/dist/select2-flag-icons.min.js"></script>
+
+    </body>
+</html>

@@ -1,0 +1,32 @@
+<script>
+    function slideSideBar(){
+    let element = $("#sidebarChange");
+    if (element.hasClass("sidebar-transition")) { /* mivelatra */
+        element.removeClass("sidebar-transition");
+        $("#slideSideBarIcon").attr("src", "img/icons/menu-alt-1-svgrepo-com.svg");
+    }
+    else{ /* mihena */
+        element.addClass("sidebar-transition");
+        $("#slideSideBarIcon").attr("src", "img/icons/menu-alt-svgrepo-com.svg");
+    }
+}
+</script>
+<div class="vg-left-header">
+    <div class="vg-lang">
+        <div style="display: flex; gap: 20px; align-items: center;">
+            <div role="button" onClick="slideSideBar()">
+                <img src="img/icons/menu-alt-1-svgrepo-com.svg" alt="" height="30px" id="slideSideBarIcon">
+            </div>
+        </div>
+    </div>
+</div>
+<div class="vg-right-header">
+    <div class="vg-header-profil">
+        <span><i class="fa fa-user"></i></span>
+            <label for="John Doe" class="vg-lab-user"><span  id="name_user_connected"></span> <br> <span id="email_user_connected"></span><br> <span id="phone_user_connected"></span>
+            </label>
+        <input type="text" id="token_" hidden />
+    </div>
+
+    
+</div>

@@ -1,0 +1,106 @@
+<table id="table_appartement" class="display data"
+                    data-rtc-resizable-table="table.one">
+
+                    <thead>
+                        <tr>
+                            <th data-rtc-resizable="name"
+                                data-column-name="Description">
+                                Nom
+                            </th>
+                            <th data-rtc-resizable="name"
+                                data-column-name="Loyer">E-mail</th>
+                            <th data-rtc-resizable="name"
+                                data-column-name="Surface">Télephone</th>
+                            <th data-rtc-resizable="name"
+                                data-column-name="Adresse postale">Adresse
+                                postale</th>
+
+                            <th data-rtc-resizable="name"
+                                data-column-name="Adresse postale">Appartement
+                                louer</th>
+
+                           
+                            <th data-rtc-resizable="name"
+                                data-column-name="Adresse postale">Envoyer le
+                                rappel</th>
+
+                            <th data-rtc-resizable="name"
+                                data-column-name="Actions">ACTIONS</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        <%for(let id=0;id<listes.length;id++){%>
+                            <tr>
+                                <td role="button"
+                                    onclick="profile_contact('<%=listes[id]._id%>')"
+                                    title="Voir plus"> <%=listes[id].first_name+" "+listes[id].last_name%></td>
+                                <td role="button"
+                                    onclick="profile_contact('<%=listes[id]._id%>')"
+                                    title="Voir plus"> <%=listes[id].email%></td>
+                                <td role="button"
+                                    onclick="profile_contact('<%=listes[id]._id%>')"
+                                    title="Voir plus"> <%=listes[id].phone%>
+                                </td>
+                                <td role="button"
+                                    onclick="profile_contact('<%=listes[id]._id%>')"
+                                    title="Voir plus">
+                                    <%=listes[id].address%>
+                                </td>
+
+                                <td>  <%=listes[id].bien.name%></td>
+                                
+                                <td role="button" onclick="newquittance()">
+                                    <img src="img/mail_sent.png"
+                                    alt="Envoye de quittance"
+                                    width="25"/>
+                                 </td>
+                                <td class="action-table">
+                                   
+                                <button class="btn-pen"
+                                    data-bs-toggle="modal"
+                                    onclick="show_modal_update_locataire('<%=listes[id]._id%>')"
+                                    data-bs-target="#modalUpdateLocataire"
+                                    title="Modifier">
+                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                        width="12.742" height="12.611"
+                                        viewBox="0 0 12.742 12.611">
+                                        <path id="Icon_feather-edit-2"
+                                            data-name="Icon feather-edit-2"
+                                            d="M11.784,3.742a1.656,1.656,0,0,1,2.342,2.342L6.221,13.99,3,14.868l.878-3.221Z"
+                                            transform="translate(-2.5 -2.757)"
+                                            fill="none" stroke="#fffcfc"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            stroke-width="1" />
+                                    </svg>
+                                </button>
+                                <button class="btn-trash"
+                                    data-bs-toggle="modal"
+                                    onclick="show_modal_delete_locataire('<%=listes[id]._id%>')"
+                                    data-bs-target="#modalDeleteLocataire"
+                                    title="Supprimer">
+                                    <svg id="supp"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        width="21.593" height="16"
+                                        viewBox="0 0 21.593 21.69">
+                                        <path id="Tracé_34"
+                                            data-name="Tracé 34"
+                                            d="M30.231,10.23H14.452a2.982,2.982,0,0,0-2.982,2.982v1.95a2.982,2.982,0,0,0,2.028,2.8l.829,11.218a2.982,2.982,0,0,0,2.946,2.743H27.411a2.982,2.982,0,0,0,2.934-2.743l.823-13.191a2.982,2.982,0,0,0-.936-5.755Zm-1.855,18.8a.984.984,0,0,1-.984.924H17.255a1,1,0,0,1-.984-.918L15.5,18.12h3.053a2.94,2.94,0,0,0,2.111-.871l.817-.817a.99.99,0,0,1,.7-.292h7.007Zm1.855-14.855H22.175a2.928,2.928,0,0,0-2.093.865l-.817.817a1,1,0,0,1-.7.286H14.452a.984.984,0,0,1-.984-.984V13.188a.984.984,0,0,1,.984-.984h15.78a.99.99,0,0,1,0,1.974Z"
+                                            transform="translate(-11.47 -10.23)"
+                                            fill="#fff" />
+                                        <path id="Tracé_35"
+                                            data-name="Tracé 35"
+                                            d="M25.7,28.456l-.684.912a1.372,1.372,0,0,0,1.1,2.192h1.368a1.372,1.372,0,0,0,1.1-2.192l-.684-.912a1.409,1.409,0,0,0-2.2,0Zm1.1.829.684.912H26.113Z"
+                                            transform="translate(-15.917 -16.353)"
+                                            fill="#fff" />
+                                    </svg>
+                                </button>
+
+                            </td>
+
+                        </tr>
+                        <%}%>
+
+                    </tbody>
+                </table>

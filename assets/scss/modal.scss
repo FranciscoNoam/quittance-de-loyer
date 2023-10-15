@@ -1,0 +1,75 @@
+.modal {
+  .modal-dialog {
+    margin-top: 72px;
+    .modal-content {
+      border-radius: 24px;
+      .modal-header {
+        border-top-left-radius: 24px;
+        border-top-right-radius: 24px;
+        background: $greyG;
+        padding: 19px 35px 18px;
+        color: #fff;
+        font-size: 18px;
+        .btn-close {
+          background: transparent;
+          color: #fff !important;
+          opacity: 1;
+          position: relative;
+          right: -7px;
+          top: 0px;
+          border: 2px solid white;
+          box-sizing: none;
+          padding: 6px 5px 2px;
+          border-radius: 100%;
+          &:hover {
+            color: $greyG !important;
+            background-color: #fff;
+            transition: 0.4s;
+            cursor: pointer;
+          }
+        }
+      }
+      .modal-body {
+        padding: 25px 45px 42px !important;
+        .form-modal {
+          label {
+            font-size: 14px;
+            margin-bottom: 7px;
+          }
+          input,
+          select,
+          textarea {
+            background-color: $grey-color;
+            border: none;
+            font-size: 14px;
+            padding: 9px 21px;
+            border: 1px solid transparent;
+          }
+          input:focus {
+            outline: 0 !important;
+            box-shadow: none !important;
+            border: 1px solid $purpleColor;
+          }
+        }
+        .modal-footer {
+          margin: 0;
+          padding: 35px 0 0;
+          border-top: none;
+          button {
+            font-size: 12px;
+            width: 100%;
+            background: $purpleColor;
+            color: #fff;
+            padding: 13px 0 11px;
+            margin: 0;
+            &:hover {
+              transition: 0.4s;
+              cursor: pointer;
+              opacity: 0.7;
+            }
+          }
+        }
+      }
+    }
+  }
+}

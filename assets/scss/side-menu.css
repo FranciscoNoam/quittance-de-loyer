@@ -1,0 +1,133 @@
+.side-nav .vg-logo {
+  text-align: center;
+}
+.side-nav .vg-logo img {
+  width: 12em;
+}
+.side-nav .vg-menu {
+  display: grid;
+  align-content: space-between;
+  height: 88%;
+  padding: 0 20px;
+}
+.side-nav .vg-menu .vg-top-menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 85vh;
+}
+.side-nav .vg-menu .vg-top-menu span.select2-container {
+  width: 10% !important;
+}
+.side-nav .vg-menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.side-nav .vg-menu ul li {
+  padding: 11px 0 6px 15px;
+  border-radius: 8px;
+  margin: 12px 0;
+  position: relative;
+  /* a {
+     text-decoration: none;
+     &:hover {
+       cursor: pointer;
+     }
+   }
+   i {
+     color: #ffffff;
+     font-size: 19px;
+   }
+   &:hover {
+     background: #ffffff;
+     cursor: pointer;
+     svg.w-svg g path,
+     svg path {
+       fill: #2f2fc9 !important;
+     }
+   }
+   &:hover i,
+   &:hover label {
+     color: #2f2fc9;
+     &:hover {
+       cursor: pointer;
+     }
+   }
+   &.vg-active {
+     background: #ffffff;
+     i,
+     label {
+       color: #2f2fc9;
+     }
+     svg.w-svg g path,
+     svg path {
+       fill: #2f2fc9 !important;
+     }
+   }
+
+   span {
+     display: flex;
+     gap: 15px;
+     align-items: center;
+   }
+   label {
+     font-size: 14px;
+     color: #ffffff;
+     font-family: "NexaLight", sans-serif;
+     font-weight: lighter !important;
+   }*/
+}
+.side-nav .vg-menu ul li a {
+  text-decoration: none;
+}
+.side-nav .vg-menu ul li a:hover {
+  cursor: pointer;
+}
+.side-nav .vg-menu ul li i {
+  color: #ffffff;
+  font-size: 19px;
+}
+.side-nav .vg-menu ul li.vg-active {
+  background: #ffffff;
+}
+.side-nav .vg-menu ul li.vg-active i,
+.side-nav .vg-menu ul li.vg-active label {
+  color: #2f2fc9;
+}
+.side-nav .vg-menu ul li.vg-active svg.w-svg g path,
+.side-nav .vg-menu ul li.vg-active svg path {
+  fill: #2f2fc9 !important;
+}
+.side-nav .vg-menu ul li span {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+.side-nav .vg-menu ul li label {
+  font-size: 14px;
+  color: #ffffff;
+  font-family: "NexaLight", sans-serif;
+  font-weight: lighter !important;
+}
+
+#menu-gche ul li svg {
+  position: relative;
+  top: -3px;
+}
+#menu-gche ul li a label:hover {
+  cursor: pointer;
+}
+
+.menu:hover {
+  background: #ffffff;
+  cursor: pointer;
+}
+.menu:hover i,
+.menu:hover label {
+  color: #2f2fc9 !important;
+}
+.menu:hover svg.w-svg g path,
+.menu:hover svg path {
+  fill: #2f2fc9 !important;
+}/*# sourceMappingURL=side-menu.css.map */

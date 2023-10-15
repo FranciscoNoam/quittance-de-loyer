@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+  <g id="note" transform="translate(-12 -397)">
+    <g id="Frame_427321991" data-name="Frame 427321991" transform="translate(12 97)">
+      <g id="Frame" transform="translate(0 300)">
+        <rect id="Frame-2" data-name="Frame" width="24" height="24" fill="none"/>
+        <path id="Vector" d="M16.443,5.713A.75.75,0,0,1,16.5,6V18A1.5,1.5,0,0,1,15,19.5H1.5A1.5,1.5,0,0,1,0,18V1.5A1.5,1.5,0,0,1,1.5,0h9a.75.75,0,0,1,.531.219l5.25,5.25a.75.75,0,0,1,.162.243ZM11.25,5.25h2.69L11.25,2.56ZM15,6.75H10.5A.75.75,0,0,1,9.75,6V1.5H1.5V18H15ZM12,10.5a.75.75,0,0,1-.75.75h-6a.75.75,0,0,1,0-1.5h6a.75.75,0,0,1,.75.75Zm0,3a.75.75,0,0,1-.75.75h-6a.75.75,0,0,1,0-1.5h6a.75.75,0,0,1,.75.75Z" transform="translate(3.75 2.25)" fill="#fff"/>
+      </g>
+    </g>
+  </g>
+</svg>

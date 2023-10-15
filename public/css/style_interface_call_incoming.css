@@ -1,0 +1,86 @@
+.width-btn-number-end-call div {
+    color: white;
+    width: 23px;
+    height: 23px;
+    background-color: red;
+    justify-content: center;
+    padding: 22px;
+    border-radius: 50%;
+    font-size: 18px;
+}
+
+.width-btn-number-call div {
+    color: white;
+    width: 23px;
+    height: 23px;
+    background-color: green;
+    justify-content: center;
+    padding: 22px;
+    border-radius: 50%;
+    font-size: 18px;
+}
+
+.width-btn-number-end-call div:hover {
+    background-color: rgb(217, 65, 65);
+    transition: 0.4s;
+    cursor: pointer;
+}
+
+.width-btn-number-end-call div i {
+    position: relative;
+    top: -8px;
+    right: 8px;
+}
+
+.width-btn-number-call div:hover {
+    background-color: rgb(37, 150, 37);
+    transition: 0.4s;
+    cursor: pointer;
+}
+
+.width-btn-number-call div i {
+    position: relative;
+    top: -8px;
+    right: 8px;
+}
+
+.offcanvas-header {
+    background: var(--secondaryColor);
+    margin-bottom: 6px;
+}
+
+.offcanvas-footer {
+    padding: 28px 0;
+    background: #f2f8fd;
+}
+
+.offcanvas-header h5 {
+    color: #fff;
+    font-size: 14px;
+    padding: 9px 0;
+}
+
+.offcanvas-top {
+    top: 0;
+    right: 25%;
+    left: 25%;
+    height: 30vh;
+    max-height: 97%;
+    border-bottom: 1px solid rgba(0,0,0,.2);
+    transform: translateY(-100%);
+}
+
+.offcanvas {
+    position: fixed;
+    bottom: 0;
+    z-index: 1050;
+    /* display: flex; */
+    flex-direction: column;
+    max-width: 60%;
+    display: flex !important;
+    justify-content: center !important;
+    background-color: #fff;
+    background-clip: padding-box;
+    outline: 0;
+    transition: transform .3s ease-in-out;
+}

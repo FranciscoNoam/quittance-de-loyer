@@ -1,0 +1,228 @@
+@import url("variable.css");
+
+body {
+  overflow: hidden;
+}
+.limiter {
+  height: 100%;
+  /* background: #08355d; */
+  /* background-image: url("../img/bl-lg.png");
+    background-size:     cover;                    
+    background-repeat:   no-repeat;
+    background-position: center center;  */
+}
+
+.log-right {
+  padding: 0% 9%;
+}
+
+.background {
+  width: 430px;
+  height: 520px;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 49%;
+}
+.background .shape {
+  height: 200px;
+  width: 200px;
+  position: absolute;
+  border-radius: 50%;
+}
+.shape:first-child {
+  /* background: linear-gradient(
+        #1845ad,
+        #23a2f6
+    ); */
+  left: -276px;
+  bottom: -235px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+.shape:last-child {
+  /* background: linear-gradient(
+        to right,
+        #e67e23,
+        #f09819
+    ); */
+  right: -276px;
+  bottom: -235px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.shape i {
+  font-size: 88px;
+  text-shadow: 2px 4px 6px black;
+}
+
+.shape fa {
+  font-size: 50px;
+}
+
+form {
+  /* height: 460px;
+    width: 400px;
+    background-color: rgba(255,255,255,0.13);
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 41%;
+    left: 50%;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255,255,255,0.1);
+    box-shadow: 0 0 40px rgba(8,7,16,0.6);
+    padding: 50px 35px;*/
+}
+form * {
+  font-family: "Poppins", sans-serif;
+  color: #ffffff;
+  letter-spacing: 0.5px;
+  outline: none;
+  border: none;
+}
+form h3 {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 42px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+label {
+  display: block;
+  margin-top: 30px;
+  font-size: 16px;
+  font-weight: 500;
+  color: red;
+}
+input {
+  display: block;
+  height: 50px;
+  background-color: rgba(255, 255, 255, 0.07);
+  border-radius: 3px;
+  padding: 0 10px;
+  margin-top: 8px;
+  font-size: 14px;
+  font-weight: 300;
+}
+::placeholder {
+  color: #e5e5e5;
+}
+button {
+  margin-top: 4px;
+  width: 100%;
+  background-color: var(--primaryColor);
+  padding: 10px 0;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 5px;
+  cursor: pointer;
+  color: white;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: var(--btn-hover-color);
+  color: var(--text-hover-color);
+  transition: 0.4s;
+}
+.social {
+  margin-top: 30px;
+  display: flex;
+}
+.social div {
+  background: red;
+  width: 150px;
+  border-radius: 3px;
+  padding: 5px 10px 10px 5px;
+  background-color: rgba(255, 255, 255, 0.27);
+  color: #eaf0fb;
+  text-align: center;
+}
+.social div:hover {
+  background-color: rgba(255, 255, 255, 0.47);
+}
+.social .fb {
+  margin-left: 25px;
+}
+.social i {
+  margin-right: 4px;
+}
+
+.symbol-input100 {
+  font-size: 15px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  border-radius: 25px;
+  left: -13px;
+  color: red;
+  width: 100%;
+  height: 100%;
+  padding-left: 35px;
+  pointer-events: none;
+  color: #c11f1f !important;
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+.symbol-input100 i {
+  color: var(--primaryColor);
+}
+.input100 {
+  margin: 16px 0 33px !important;
+}
+
+.log-form {
+  margin: auto;
+  background: #44cba3;
+  margin-top: 8%;
+  padding: 25px 43px 37px;
+  width: 44vh;
+  position: relative;
+}
+
+.submit-log {
+  background-color: #25265e;
+}
+
+.nav-login {
+  position: absolute;
+  top: -40px;
+  background: #44cba326;
+  text-align: center;
+  right: 0;
+}
+
+.nav-login a {
+  font-size: 14px;
+  color: #09435f;
+  border-left: 1px solid white;
+}
+
+li.nav-item:hover {
+  background: #31a784;
+}
+li.nav-item:hover a {
+  background: #31a784;
+  color: #fff;
+}
+
+li.nav-item.m-active {
+  background: #31a784;
+}
+li.nav-item.m-active a {
+  color: #fff !important;
+}
