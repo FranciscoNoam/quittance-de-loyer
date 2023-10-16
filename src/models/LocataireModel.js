@@ -41,8 +41,5 @@ var LocataireSchema = new mongoose.Schema({
     }
 });
 
-LocataireSchema.set("timestamps", true);
-LocataireSchema.plugin(passportLocalMongoose);
-
 const Locatairedb = mongoose.model("locataires", LocataireSchema);
 module.exports = Locatairedb;
